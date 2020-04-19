@@ -4,11 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>English for kids</title>
   <link rel="icon" type="image/png" href="./favicon.ico">
-  <script src="src/index.js" type="module" defer></script>
-  <link rel="stylesheet" href="src/style.css">
+  <link rel="stylesheet" href="./src/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+  <title>English for Kids</title>
+  <script src="./src/category.js" type="module" defer></script>
 </head>
 
 <body>
@@ -20,7 +21,7 @@
         <span></span>
         <span></span>
         <ul class="side-menu__list">
-          <li><a href="#">Main page</a></li>
+          <li><a href="./index.html">Main page</a></li>
         </ul>
       </div>
       <div class="switch-container">
@@ -32,7 +33,9 @@
         </label>
       </div>
     </header>
-    <main class="main-container"></main>
+    <div class="score-line"></div>
+    <main class="category-container"></main>
+    <div class="play-btn-container"><button class="play-btn hidden">Play game!</button></div>
   </div>
 </body>
 

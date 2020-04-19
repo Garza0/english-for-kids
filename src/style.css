@@ -1,0 +1,385 @@
+body  {
+  font-family: Roboto;
+  background-image: url("./img/leaves-pattern.png");
+  background-repeat: repeat;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+}
+
+li {
+  cursor: pointer;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: auto;
+
+}
+
+.header {
+  max-width: 1000px;
+}
+
+
+.hidden {
+  display: none !important;
+}
+
+.cards__container {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+}
+
+
+.cards__item {
+  width: 300px;
+  height: 245px;
+  margin: 20px 25px;
+  border-radius: 5px;
+  background-color: white;
+  overflow: hidden;
+  font-size: 24px;
+  text-align: center;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all .5s;
+  box-shadow: 0 0 14px 4px rgba(0,0,0,.2);
+
+
+
+}
+
+.train__card {
+  /* width: 100%;
+  height: 100%; */
+  transition: transform 1s;
+  /* transform-style: preserve-3d; */
+  cursor: pointer;
+  /* position: relative; */
+  backface-visibility: hidden;
+    /* width: 300px;
+  height: 245px; */
+  margin: 20px 25px;
+  border-radius: 5px;
+  /* background-color: white; */
+  overflow: hidden;
+  font-size: 24px;
+  text-align: center;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all .5s;
+}
+
+.train__card-wrapper {
+  transition: transform 1s;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: flex-end;
+  width: 300px;
+  height: 250px;
+  background-color: white;
+  box-shadow: 0 0 10px 4px rgba(0,0,0,.16);
+  border-radius: 5px;
+}
+
+.train__card-wrapper:hover {
+  box-shadow: 0 0 14px 4px rgba(0,0,0,.7);
+}
+
+.train__card--front, .train__card--back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.train__card--back {
+  transform: rotateY(180deg);
+}
+
+.categories__card--play {
+  background: linear-gradient(40deg,#ffd86f,#fc6262);
+}
+
+.cards__item:hover {
+  box-shadow: 0 0 14px 4px rgba(0,0,0,.7);
+}
+
+.card__header {
+  height: 120px;
+  overflow: hidden;
+}
+
+
+.card__header--train-mode {
+  background: linear-gradient(40deg,#45cafc,#303f9f);
+}
+.card__header--play-mode {
+  background: linear-gradient(40deg,#ffd86f,#fc6262);
+}
+
+.categories__avatar {
+  width: 120px;
+  height: 120px;;
+  margin-top: -60px;
+  overflow: hidden;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  margin-left: calc(50% - 60px) ;
+}
+
+.categories__image {
+  width: auto;
+  height: 100%;
+  margin-left: -50px;
+}
+
+.categories__text {
+  margin-top: 5px;
+}
+
+.cards__image--train {
+  width: 100%;
+}
+
+.cards__text--train {
+  margin-top: 2px;
+}
+
+.rotate {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background-image: url('./img/refresh.png');
+  background-size: contain;
+  filter: contrast(0.3);
+}
+
+.rotate:hover {
+  filter: none;
+}
+
+header {
+  position: relative;
+  height: 40px;
+  margin-top: 45px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.side-menu__toggle
+{
+ display: block;
+ position: relative;
+ left: 50px;
+ z-index: 99;
+ user-select: none;
+}
+
+.side-menu__toggle input
+{
+ display: block;
+ width: 40px;
+ height: 32px;
+ position: absolute;
+ top: -7px;
+ left: -5px;
+ cursor: pointer;
+ opacity: 0; 
+ z-index: 2; 
+ -webkit-touch-callout: none;
+}
+
+
+.side-menu__toggle span {
+  display: block;
+ width: 33px;
+ height: 4px;
+ margin-bottom: 5px;
+ position: relative;
+ background: #757575;
+ border-radius: 3px;
+ z-index: 1;
+ transform-origin: 4px 0px;
+ transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+             background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+             opacity 0.55s ease;
+}
+
+.side-menu__toggle span:first-child
+{
+ transform-origin: 0% 0%;
+}
+
+.side-menu__toggle span:nth-last-child(2)
+{
+ transform-origin: 0% 100%;
+}
+
+.side-menu__toggle input:checked ~ span
+{
+ opacity: 1;
+ transform: rotate(45deg) translate(-2px, -1px);
+ background: #232323;
+}
+
+.side-menu__toggle input:checked ~ span:nth-last-child(3)
+{
+ opacity: 0;
+ transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.side-menu__toggle input:checked ~ span:nth-last-child(2)
+{
+ transform: rotate(-45deg) translate(0, -1px);
+}
+
+.side-menu__list {
+opacity: 0;
+ position: absolute;
+ width: 300px;
+ height: 100vh;
+ margin: -100px 0 0 -50px;
+ padding: 50px;
+ padding-top: 125px;
+ 
+ background: #ededed;
+ list-style-type: none;
+ -webkit-font-smoothing: antialiased;
+
+ transform-origin: 0% 0%;
+ transform: translate(-100%, 0);
+ 
+ transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+.side-menu__list li
+{
+ padding: 10px 0;
+ font-size: 22px;
+ 
+}
+
+.side-menu__list li:hover
+{
+  
+    text-decoration: underline;
+
+ 
+}
+
+.side-menu__toggle input:checked ~ ul
+{
+  opacity: 100;
+ transform: none;
+} 
+
+.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.cards__image--play {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+}
+
+
+.score-line {
+  display: flex;
+  justify-content: flex-end;
+  height: 42px;
+}
+
+.play-btn-container {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-btn {
+    font-size: 24px;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 650px;
+    height: 65px;
+    background: linear-gradient(40deg,#ffd86f,#fc6262);
+    color: #fff;
+    border-radius: 10px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+
+.train__card--inactive {
+  filter: opacity(0.5);
+}
+
+.play-btn--repeat-mode {
+  max-width: 65px;
+  border-radius: 50%;
+  background-image: url("data/img/repeat.svg"),
+  linear-gradient(40deg,#ffd86f,#fc6262);
+    background-repeat: no-repeat;
+    background-size: 32px 32px,cover;
+    background-position: 50%;
+}
+
+
+.switch-container {
+  background-color: rgba(0, 0, 0, .1);
+  border-radius: 9999px;
+  display: inline-flex;
+  padding: 4px;
+  width: 120px;
+  justify-content: space-between;
+}
+
+.radio-container {
+  transition: all .5s;
+  text-align: center;
+  border-radius: 9999px;
+  cursor: pointer;
+  line-height: 30px;
+  font-size: 20px;
+  width: 59px;
+}
+
+.radio-container--selected {
+  background-color: #357edd;
+  color: #fff;
+}
+
+.finish-score-container {
+  text-align: center;
+  font-size: 30px;
+  color: red;
+  line-height: 73px;
+  font-weight: bold;
+}
+
+.finish-smile {
+  display: block;
+  margin: auto;
+}
+
+
+
